@@ -10,7 +10,14 @@ struct sid: App {
 }
 
 struct ContentView: View {
+	@State var buttonText = "Hello"
+
 	var body: some View {
 		Text("Hello World!")
+		Button {
+			buttonText = buttonText == "Bye" ? "Hello"
+		} label {
+			Text(buttonText)
+		}
 	}
 }
